@@ -10,7 +10,7 @@ class GreetingRequest(BaseModel):
     message: Optional[str] = "Давай дружить"
 
 # GET-эндпоинт для обработки запроса
-@app.get("/greet")
+@app.get("/")
 async def greet(req: GreetingRequest = Depends()): 
     # Формируем ответ
     response = f"Hello {req.name}! {req.message}!"
